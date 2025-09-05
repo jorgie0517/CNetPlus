@@ -1,0 +1,138 @@
+Subnetting (via Hosts)
+
+1. Design a network for teleperformance.com with 360 administrators, team leads, and managers.
+Use the IP address space 10.0.0.0/8
+
+Convert (bit length): 9
+Subtract: /32 - 9 = /23 (3rd, 2i)
+Ipasok: si 2i sa 3rd octet = 10.0.2.0
+
+teleperformance.com: (NETWORK): 10.0.2.0  /23
+Valid Range:
+ - First Valid IP:  		10.0.2.1 /23
+ - LAST Valid IP: 		10.0.3.254
+Last IP(BROADCAST): 		10.0.3.255
+
+NOT Network:			10.0.4.0 /23
+
+
+
+2. Design a network for foundever.com with 980 guest users.
+Use the IP address space 10.15.64.0/18
+
+Convert (bit length): 10b
+Subtract: /32 - 10 = /22 (3rd, 4i)
+Ipasok: si 4i sa 3rd octet = 10.15.4.0 /22
+
+foundever.com: (NETWORK): 10.15.4.0  /22
+Valid Range:
+ - First Valid IP: +1 		10.15.4.1 /22
+ - LAST Valid IP:  -1		10.15.7.254
+Last IP(BROADCAST): 		10.15.7.255
+
+NOT Network:			10.15.8.0 /22
+
+
+
+3. Design a network for concentrix.com with 26 computers and printers. 
+Use the IP address space 172.16.128.0/17
+
+Convert (bit length): 5
+Subtract: /32 - 5 = /27 (4th,32i)
+Ipasok: si 32i sa 4th octet = 172.16.128.32 /27
+
+concentrix.com: (NETWORK): 172.16.128.32  /27
+Valid Range:
+ - First Valid IP:  		172.16.128.33 /27
+ - LAST Valid IP: 		172.16.128.62 /27
+Last IP(BROADCAST): 		172.16.128.63 /27
+
+NOT Network:			172.16.128.64 /27
+
+
+4. Design a network for accenture.com with 2580 CISO, Network engineers, and Data Analysts.
+Use the IP address spacke 192.168.64.0 /20
+
+Convert (bit length): 12
+Subtract: /32 - 12 = /20 (3rd,16i)
+Ipasok: si 16i sa 3rd octet = 192.168.16.0 /20
+
+accenture.com: (NETWORK): 192.168.16.0 /20
+Valid Range:
+ - First Valid IP:  +1		192.168.16.1
+ - LAST Valid IP:    -1		192.168.31.254
+Last IP(BROADCAST): 		192.168.31.255
+
+NOT Network:			192.168.32.0
+
+
+
+---
+
+Subnetting (via Subnet)
+
+1. BPO Alabang is need of 7 new offices. Use the network 10.0.0.0/8 
+Maximize the number of hosts per subnet.
+Identify each network of each office:
+
+Convert (bit value): 3
+Add: /08 + 3 bits = /11 (Octet 2nd, 32i)
+Ipasok si 32i sa 2nd Octet
+
+1st Office: 10.0.0.0 /11
+2nd Office: 10.32.0.0 /11
+3nd Office: 10.64.0.0 /11
+4rd Office: 10.96.0.0 /11
+5th Office: 10.128.0.0 /11
+6th Office: 10.160.0.0 /11
+7th Office: 10.192.0.0 /11
+
+
+
+2. Subnet for 4 new sites for PNB BGC. Use the network 10.25.4.0/24
+Identify the Network and Broadcast IP for each site.
+
+Convert (bit value): 2
+Add:  /24 + 2 bits = /26 (Octet 4th, 64i)
+Ipasok si 64i sa 4th Octet
+
+1st Site: 10.25.4.0 /26
+ - Network IP: 10.25.4.1 /26
+ - Broadcast IP: 10.25.4.63 /26
+ 
+2nd Site: 10.25.4.64 /26
+ - Network IP: 10.25.4.65 /26
+ - Broadcast IP: 10.25.4.127 /26
+ 
+3rd Site: 10.25.4.128 /26
+ - Network IP: 10.25.4.129 /26
+ - Broadcast IP: 10.25.4.191 /26
+ 
+4th Site: 10.25.4.192 /26
+ - Network IP: 10.25.4.193 /26
+ - Broadcast IP:10.25.4.255 /26
+ 
+ 
+3. Subnet for 20 branches for BDO Alabang. Use the network 172.16.64.0/18
+Identify the network IP of the 4th branch.
+
+Convert (bit value): 5
+Add: /18 + 5 bits = /23 (3rd, 2i)
+Ipasok: si 2i sa 3rd
+
+
+1st Network IP: 172.16.64.0 /23
+2nd Network IP: 172.16.66.0 /23
+3rd Network IP: 172.16.68.0 /23
+4th Network IP: 172.16.70.0 /23
+
+
+4. Subnet for 58 offices for BDO BGC. Use the network 192.168.0.0/16
+Identify the network IP of the 3rd office.
+
+Convert (bit value): 6
+Add: /16 + 6 bits = /22 (3rd, 4i)
+Ipasok: si 4i sa 3rd 
+1st Network IP:192.168.0.0 /22
+2nd Network IP:192.168.4.0 /22
+3rd Network IP: 192.168.8.0 /22
